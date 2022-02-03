@@ -22,7 +22,17 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('MSPR project'),
+        ),
+        body: Center(
+          child: ElevatedButton(
+              onPressed: ()=>{},
+              child: Text('Start')
+          )
+        ),
+      ),
     );
   }
 }
