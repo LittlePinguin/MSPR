@@ -1,0 +1,25 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.msprprojetct">
+    <!-- Flutter needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>
+
+<!-- "AR Required" apps must declare minSdkVersion ≥ 24 -->
+<uses-sdk android:minSdkVersion="24" />
+
+<uses-permission android:name="android.permission.CAMERA" />
+
+<!-- Indicates that app requires ARCore ("AR Required"). Ensures app is only
+     visible in the Google Play Store on devices that support ARCore.
+-->
+<uses-feature android:name="android.hardware.camera.ar" />
+
+<application>
+    …
+    <!-- Indicates that app requires ARCore ("AR Required"). Causes Google
+         Play Store to download and install ARCore when the app is installed.
+    -->
+    <meta-data android:name="com.google.ar.core" android:value="required" />
+</application>
